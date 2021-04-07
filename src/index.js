@@ -1,13 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {
+  BrowserRouter,
+  Route,
+  Switch,
+  Redirect,
+} from 'react-router-dom';
+
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import { ThemeProvider } from './components/ThemeContext/ThemeContext';
+import ThemeBackground from './components/ThemeBackground/ThemeBackground';
+import Tournament from './components/Tournament/Tournament';
+import Home from './components/Home/Home';
+import Profile from './components/Profile/Profile';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <ThemeProvider>
+    <ThemeBackground>
+      <BrowserRouter>
+        <Switch>
+          <Route path='/tournament' component={Tournament} />
+          <Route path='/profile' exact component={Profile} />
+          <Route path='/' exact component={Home} />
+          <Redirect from='*' to='/' />
+        </Switch>
+      </BrowserRouter>
+    </ThemeBackground>
+  </ThemeProvider>,
   document.getElementById('root')
 );
 
