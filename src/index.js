@@ -1,5 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
+import reportWebVitals from './reportWebVitals';
+
+import { ThemeProvider } from './components/ThemeContext/ThemeContext';
+import ThemeBackground from './components/ThemeBackground/ThemeBackground';
+
+// import AOS from 'aos';
+// import 'aos/dist/aos.css';
 import {
   BrowserRouter,
   Route,
@@ -7,11 +15,6 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import './index.css';
-import reportWebVitals from './reportWebVitals';
-
-import { ThemeProvider } from './components/ThemeContext/ThemeContext';
-import ThemeBackground from './components/ThemeBackground/ThemeBackground';
 import Tournament from './components/Tournament/Tournament';
 import Home from './components/Home/Home';
 import Profile from './components/Profile/Profile';

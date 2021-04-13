@@ -4,14 +4,14 @@ import { Transition } from '@headlessui/react';
 
 import ThemeToggle from '../ThemeToggle/ThemeToggle';
 import { SiDiscord } from 'react-icons/si';
-import { GiTrophyCup } from 'react-icons/gi';
+import { GiCutDiamond } from 'react-icons/gi';
 
 const Nav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
-    <nav className='bg-gradient-to-br from-purple-500 to-purple-600 dark:from-emerald-500 dark:to-emerald-600'>
+    <nav className='bg-gradient-to-br from-fuchsia-600 to-indigo-600 dark:from-teal-500 dark:to-green-500'>
       <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
         <div className='relative flex items-center justify-between h-16'>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
@@ -19,7 +19,7 @@ const Nav = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               type='button'
-              className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 dark:text-gray-900 dark:hover:text-white dark:hover:bg-emerald-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'
+              className='inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-purple-700 dark:text-gray-900 dark:hover:text-white dark:hover:bg-emerald-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'
               aria-controls='mobile-menu'
               aria-expanded='false'
             >
@@ -61,31 +61,28 @@ const Nav = () => {
           </div>
           <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
             <div className='flex-shrink-0 flex items-center'>
-              <GiTrophyCup className='block lg:hidden h-8 w-auto text-white dark:text-gray-900' />
-              <GiTrophyCup className='hidden lg:block h-8 w-auto text-white dark:text-gray-900' />
+              <GiCutDiamond className='block lg:hidden h-8 w-auto text-white dark:text-black' />
+              <GiCutDiamond className='hidden lg:block h-8 w-auto text-white dark:text-black' />
             </div>
             <div className='hidden sm:block sm:ml-6'>
               <div className='flex space-x-4'>
                 {/* // Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" // */}
                 <Link to='/tournament'>
-                  <div className='text-gray-200 hover:bg-purple-800 hover:text-white dark:text-gray-100 dark:hover:bg-emerald-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
+                  <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:text-gray-100 dark:hover:bg-emerald-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
                     Tournaments
                   </div>
                 </Link>
+                <Link to='/'>
+                  <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:text-gray-100 dark:hover:bg-emerald-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
+                    League
+                  </div>
+                </Link>
 
-                <a
-                  href='#'
-                  className='text-gray-200 hover:bg-purple-800 hover:text-white dark:text-gray-100 dark:hover:bg-emerald-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-                >
-                  League
-                </a>
-
-                <a
-                  href='#'
-                  className='text-gray-200 hover:bg-purple-800 hover:text-white dark:text-gray-100 dark:hover:bg-emerald-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium'
-                >
-                  Support
-                </a>
+                <Link to='/'>
+                  <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:text-gray-100 dark:hover:bg-emerald-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
+                    Support
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -106,7 +103,7 @@ const Nav = () => {
                   aria-haspopup='true'
                 >
                   <span className='sr-only'>Open user menu</span>
-                  <SiDiscord className='h-8 w-8 text-white bg-purple-600 dark:bg-emerald-600 dark:text-gray-900 ' />
+                  <SiDiscord className='h-8 w-8 text-white dark:text-black bg-gradient-to-br from-purple-600 to-indigo-600 dark:from-teal-500 dark:to-green-500' />
                 </button>
               </div>
 
@@ -166,27 +163,23 @@ const Nav = () => {
         {(ref) => (
           <div className='sm:hidden' id='mobile-menu'>
             <div className='px-2 pt-2 pb-3 space-y-1'>
-              {/* // Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" // */}
-              <a
-                href='#'
-                className='text-gray-300 hover:bg-gray-700 hover:text-white dark:hover:bg-emerald-900 dark:hover:text-white dark:text-gray-100 block px-3 py-2 rounded-md text-base font-medium'
-              >
-                Tournaments
-              </a>
+              <Link to='/tournament'>
+                <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:hover:bg-emerald-900 dark:hover:text-white dark:text-gray-100 block px-3 py-2 rounded-md text-base font-medium'>
+                  Tournaments
+                </div>
+              </Link>
 
-              <a
-                href='#'
-                className='text-gray-300 hover:bg-gray-700 hover:text-white dark:hover:bg-emerald-900 dark:hover:text-white dark:text-gray-100 block px-3 py-2 rounded-md text-base font-medium'
-              >
-                League
-              </a>
+              <Link to='/'>
+                <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:hover:bg-emerald-900 dark:hover:text-white dark:text-gray-100 block px-3 py-2 rounded-md text-base font-medium'>
+                  League
+                </div>
+              </Link>
 
-              <a
-                href='#'
-                className='text-gray-300 hover:bg-gray-700 hover:text-white dark:hover:bg-emerald-900 dark:hover:text-white dark:text-gray-100 block px-3 py-2 rounded-md text-base font-medium'
-              >
-                Support
-              </a>
+              <Link to='/'>
+                <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:hover:bg-emerald-900 dark:hover:text-white dark:text-gray-100 block px-3 py-2 rounded-md text-base font-medium'>
+                  Support
+                </div>
+              </Link>
             </div>
           </div>
         )}
