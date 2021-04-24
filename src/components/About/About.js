@@ -10,7 +10,10 @@ const About = () => {
       <div className='container mx-auto px-4 lg:pt-24 lg:pb-64'>
         <div className='flex flex-wrap text-center justify-center'>
           <div className='w-full lg:w-6/12 px-4'>
-            <h2 className='text-4xl font-semibold dark:text-white text-gray-900'>
+            <h2
+              data-aos='zoom-out-right'
+              className='text-4xl font-semibold dark:text-white text-gray-900'
+            >
               Build something
             </h2>
             <p className='text-lg leading-relaxed mt-4 mb-4 text-blueGray-500 dark:text-blueGray-400'>

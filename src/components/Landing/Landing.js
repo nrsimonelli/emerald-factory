@@ -14,7 +14,7 @@ function Landing() {
           <h1 className='text-gray-900 dark:text-white text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold tracking-tight mb-8'>
             Welcome To The{' '}
             <span
-              data-aos='fade-left'
+              data-aos='zoom-out-up'
               className='bg-clip-text text-transparent bg-gradient-to-br from-indigo-600 to-fuchsia-600 dark:from-green-500 dark:to-teal-500'
             >
               Factory
