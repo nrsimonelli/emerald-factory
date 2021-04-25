@@ -12,11 +12,11 @@ const About = () => {
           <div className='w-full lg:w-6/12 px-4'>
             <h2
               data-aos='zoom-out-right'
-              className='text-4xl font-semibold dark:text-white text-gray-900'
+              className='text-4xl font-semibold dark:text-alpha-major text-darkAlpha-major'
             >
               Build something
             </h2>
-            <p className='text-lg leading-relaxed mt-4 mb-4 text-blueGray-500 dark:text-blueGray-400'>
+            <p className='text-lg leading-relaxed mt-4 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
               Put the potentially record low maximum sea ice extent
               tihs year down to low ice. According to the National
               Oceanic and Atmospheric Administration, Ted, Scambos.
@@ -25,37 +25,37 @@ const About = () => {
         </div>
         <div className='flex flex-wrap mt-12 justify-center'>
           <div className='w-full lg:w-3/12 px-4 text-center'>
-            <div className='p-3 w-12 h-12 shadow-lg rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 dark:from-teal-500 dark:to-green-500 inline-flex items-center justify-center'>
-              <RiPlantFill className='h-8 w-auto text-white dark:text-black' />
+            <div className='p-3 w-12 h-12 shadow-lg rounded-full bg-gradient-to-br from-betaMin-minor to-betaMax-minor dark:from-darkBetaMin-minor dark:to-darkBetaMax-minor inline-flex items-center justify-center'>
+              <RiPlantFill className='h-8 w-auto text-alpha-pure dark:text-darkAlpha-pure' />
             </div>
-            <h6 className='text-xl mt-5 font-semibold dark:text-white text-gray-900'>
+            <h6 className='text-xl mt-5 font-semibold dark:text-alpha-major text-darkAlpha-major'>
               Learn & Grow
             </h6>
-            <p className='mt-2 mb-4 text-blueGray-500 dark:text-blueGray-400'>
+            <p className='mt-2 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
               Deepen your understanding of the game by taking
               advantage the community's rich library.
             </p>
           </div>
           <div className='w-full lg:w-3/12 px-4 text-center'>
-            <div className='p-3 w-12 h-12 shadow-lg rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 dark:from-teal-500 dark:to-green-500 inline-flex items-center justify-center'>
-              <IoTrophy className='h-8 w-auto text-white dark:text-black' />
+            <div className='p-3 w-12 h-12 shadow-lg rounded-full bg-gradient-to-br from-betaMin-minor to-betaMax-minor dark:from-darkBetaMin-minor dark:to-darkBetaMax-minor inline-flex items-center justify-center'>
+              <IoTrophy className='h-8 w-auto text-alpha-pure dark:text-darkAlpha-pure' />
             </div>
-            <h5 className='text-xl mt-5 font-semibold dark:text-white text-gray-900'>
+            <h5 className='text-xl mt-5 font-semibold dark:text-alpha-major text-darkAlpha-major'>
               Test your skills
             </h5>
-            <p className='mt-2 mb-4 text-blueGray-500 dark:text-blueGray-400'>
+            <p className='mt-2 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
               Challenge yourself against top players from around the
               world and push your game to the next level.
             </p>
           </div>
           <div className='w-full lg:w-3/12 px-4 text-center'>
-            <div className='p-3 w-12 h-12 shadow-lg rounded-full bg-gradient-to-br from-purple-600 to-indigo-600 dark:from-teal-500 dark:to-green-500 inline-flex items-center justify-center'>
-              <AiTwotoneHeart className='h-8 w-auto text-white dark:text-black' />
+            <div className='p-3 w-12 h-12 shadow-lg rounded-full bg-gradient-to-br from-betaMin-minor to-betaMax-minor dark:from-darkBetaMin-minor dark:to-darkBetaMax-minor inline-flex items-center justify-center'>
+              <AiTwotoneHeart className='h-8 w-auto text-alpha-pure dark:text-darkAlpha-pure' />
             </div>
-            <h5 className='text-xl mt-5 font-semibold dark:text-white text-gray-900'>
+            <h5 className='text-xl mt-5 font-semibold dark:text-alpha-major text-darkAlpha-major'>
               Support
             </h5>
-            <p className='mt-2 mb-4 text-blueGray-500 dark:text-blueGray-400'>
+            <p className='mt-2 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
               Be a part of something amazing and help lift up those
               around you.
             </p>

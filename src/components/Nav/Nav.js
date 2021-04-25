@@ -126,21 +126,21 @@ const Nav = () => {
                 >
                   <a
                     href='#'
-                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha'
+                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
                     role='menuitem'
                   >
                     Your Profile
                   </a>
                   <a
                     href='#'
-                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha'
+                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
                     role='menuitem'
                   >
                     Settings
                   </a>
                   <a
                     href='#'
-                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha'
+                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
                     role='menuitem'
                   >
                     Sign out

@@ -12,13 +12,13 @@ function Landing() {
             despisedwarmonger v1.0
           </p>
           <h1 className='text-darkAlpha-major dark:text-alpha-pure text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold tracking-tight mb-8'>
-            Welcome To{' '}
-            <div
+            Welcome To <br />
+            <span
               data-aos='zoom-out-up'
-              className='h-16 bg-clip-text text-transparent bg-gradient-to-r from-betaMax-minor to-betaMin-minor dark:from-darkBetaMin dark:to-darkBetaMax'
+              className='bg-clip-text text-transparent bg-gradient-to-r from-betaMin-minor to-betaMax-minor dark:from-darkBetaMin dark:to-darkBetaMax'
             >
               Scythe League
-            </div>
+            </span>
           </h1>
           <div className='text-alpha-neutral dark:text-darkAlpha-neutral text-lg sm:text-2xl font-normal sm:leading-10 space-y-6 mb-6'>
             <p>
