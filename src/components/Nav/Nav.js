@@ -11,7 +11,7 @@ const Nav = () => {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
 
   return (
-    <nav className='bg-gradient-to-br from-fuchsia-600 to-indigo-600 dark:from-teal-500 dark:to-green-500'>
+    <nav className='bg-gradient-to-br from-betaMin to-betaMax dark:from-darkBetaMin dark:to-darkBetaMax'>
       <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
         <div className='relative flex items-center justify-between h-16'>
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
@@ -19,7 +19,7 @@ const Nav = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               type='button'
-              className='inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-white hover:bg-purple-700 dark:text-gray-900 dark:hover:text-white dark:hover:bg-emerald-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'
+              className='inline-flex items-center justify-center p-2 rounded-md text-alpha-major hover:text-alpha-pure dark:text-alpha-minor dark:hover:alpha-major  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-alpha-pure'
               aria-controls='mobile-menu'
               aria-expanded='false'
             >
@@ -62,26 +62,26 @@ const Nav = () => {
           <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
             <div className='flex-shrink-0 flex items-center'>
               <Link to='/dashboard'>
-                <GiCutDiamond className='block lg:hidden h-8 w-auto text-white dark:text-black' />
-                <GiCutDiamond className='hidden lg:block h-8 w-auto text-white dark:text-black' />
+                <GiCutDiamond className='block lg:hidden h-8 w-auto text-alpha-pure dark:text-darkAlpha-major' />
+                <GiCutDiamond className='hidden lg:block h-8 w-auto text-alpha-pure dark:text-darkAlpha-major' />
               </Link>
             </div>
             <div className='hidden sm:block sm:ml-6'>
               <div className='flex space-x-4'>
-                {/* // Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" // */}
+                {/* // Current: "bg-darkAlpha-major text-alpha-pure", Default: "text-alpha-minor hover:bg-darkAlpha-minor hover:text-alpha-pure" // */}
                 <Link to='/tournament'>
-                  <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:text-gray-100 dark:hover:bg-emerald-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
+                  <div className='text-alpha-minor hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     Tournaments
                   </div>
                 </Link>
                 <Link to='/'>
-                  <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:text-gray-100 dark:hover:bg-emerald-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
+                  <div className='text-alpha-minor hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     League
                   </div>
                 </Link>
 
-                <Link to='/'>
-                  <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:text-gray-100 dark:hover:bg-emerald-900 dark:hover:text-white px-3 py-2 rounded-md text-sm font-medium'>
+                <Link to='/color'>
+                  <div className='text-alpha-minor hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     Support
                   </div>
                 </Link>
@@ -99,13 +99,13 @@ const Nav = () => {
                     setIsProfileOpen(!isProfileOpen);
                   }}
                   type='button'
-                  className='bg-gray-800 flex text-sm focus:outline-none'
+                  className='bg-darkAlpha flex text-sm focus:outline-none'
                   id='user-menu'
                   aria-expanded='false'
                   aria-haspopup='true'
                 >
                   <span className='sr-only'>Open user menu</span>
-                  <SiDiscord className='h-8 w-8 text-white dark:text-black bg-gradient-to-br from-purple-600 to-indigo-600 dark:from-teal-500 dark:to-green-500' />
+                  <SiDiscord className='h-8 w-8 text-alpha-pure dark:text-darkAlpha-major bg-gradient-to-br from-betaMax to-betaMin dark:from-darkBetaMax dark:to-darkBetaMin' />
                 </button>
               </div>
 
@@ -119,28 +119,28 @@ const Nav = () => {
                 leaveTo='opacity-0 scale-95'
               >
                 <div
-                  className='origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white dark:bg-gray-900 ring-1 ring-black ring-opacity-5 focus:outline-none'
+                  className='origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-alpha-pure dark:bg-darkAlpha ring-1 ring-darkAlpha-pure ring-opacity-5 focus:outline-none'
                   role='menu'
                   aria-orientation='vertical'
                   aria-labelledby='user-menu'
                 >
                   <a
                     href='#'
-                    className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha'
                     role='menuitem'
                   >
                     Your Profile
                   </a>
                   <a
                     href='#'
-                    className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha'
                     role='menuitem'
                   >
                     Settings
                   </a>
                   <a
                     href='#'
-                    className='block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'
+                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha'
                     role='menuitem'
                   >
                     Sign out
@@ -166,19 +166,19 @@ const Nav = () => {
           <div className='sm:hidden' id='mobile-menu'>
             <div className='px-2 pt-2 pb-3 space-y-1'>
               <Link to='/tournament'>
-                <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:hover:bg-emerald-900 dark:hover:text-white dark:text-gray-100 block px-3 py-2 rounded-md text-base font-medium'>
+                <div className='text-alpha-minor hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
                   Tournaments
                 </div>
               </Link>
 
               <Link to='/'>
-                <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:hover:bg-emerald-900 dark:hover:text-white dark:text-gray-100 block px-3 py-2 rounded-md text-base font-medium'>
+                <div className='text-alpha-minor hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
                   League
                 </div>
               </Link>
 
               <Link to='/'>
-                <div className='text-gray-100 hover:bg-purple-800 hover:text-white dark:hover:bg-emerald-900 dark:hover:text-white dark:text-gray-100 block px-3 py-2 rounded-md text-base font-medium'>
+                <div className='text-alpha-minor hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
                   Support
                 </div>
               </Link>
