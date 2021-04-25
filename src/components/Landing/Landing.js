@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import About from '../About/About';
 
@@ -24,15 +23,14 @@ function Landing() {
             <p>
               Your central location for competitive Scythe events!
             </p>
-            <Link to='/profile'>
+            <a href='#about'>
               <div className='text-base sm:text-lg lg:text-base xl:text-lg font-medium text-beta hover:text-beta-major dark:text-darkBeta dark:hover:text-darkBeta-minor'>
                 Learn more
               </div>
-            </Link>
+            </a>
           </div>
         </header>
       </div>
-
       <About />
     </div>
   );
