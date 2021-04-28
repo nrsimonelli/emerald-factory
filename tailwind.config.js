@@ -13,36 +13,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      // primary: {
-      //   lighter: colors.violet['400'],
-      //   DEFAULT: colors.violet['500'],
-      //   darker: colors.violet['600'],
-      // },
-      // primaryHi: {
-      //   lighter: colors.indigo['400'],
-      //   DEFAULT: colors.indigo['500'],
-      //   darker: colors.indigo['600'],
-      // },
-      // primaryLo: {
-      //   lighter: colors.purple['400'],
-      //   DEFAULT: colors.purple['500'],
-      //   darker: colors.purple['600'],
-      // },
-      // primaryDark: {
-      //   lighter: colors.violet['300'],
-      //   DEFAULT: colors.violet['400'],
-      //   darker: colors.violet['500'],
-      // },
-      // primaryHiDark: {
-      //   lighter: colors.indigo['300'],
-      //   DEFAULT: colors.indigo['400'],
-      //   darker: colors.indigo['500'],
-      // },
-      // primaryLoDark: {
-      //   lighter: colors.purple['300'],
-      //   DEFAULT: colors.purple['400'],
-      //   darker: colors.purple['500'],
-      // },
+
       alpha: {
         pure: colors.white,
         major: colors.coolGray['100'],

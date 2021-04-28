@@ -3,14 +3,14 @@ require('dotenv').config();
 const app = express();
 
 // Route includes
-// const xRouter = require('./routes/x.router');
+const eventRouter = require('./routes/event.router');
 
 // Parser middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-// app.use('/api', xRouter);
+app.use('/api/events', eventRouter);
 
 // Serve static files
 app.use(express.static('build'));
