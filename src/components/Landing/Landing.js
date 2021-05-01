@@ -1,8 +1,8 @@
 import React from 'react';
-
 import About from '../About/About';
+import Info from '../Info/Info';
 
-function Landing() {
+const Landing = () => {
   return (
     <div className='px-4 mx-auto max-w-screen-sm md:max-w-screen-md md:p-0 lg:max-w-screen-lg xl:max-w-screen-xl'>
       <div className='min-h-screen flex justify-center items-center'>
@@ -32,8 +32,9 @@ function Landing() {
         </header>
       </div>
       <About />
+      <Info />
     </div>
   );
-}
+};
 
 export default Landing;
