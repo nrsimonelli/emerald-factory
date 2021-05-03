@@ -3,11 +3,11 @@ import React from 'react';
 const EventTable = (props) => {
   return (
     <>
-      <div className='bg-alpha-major flex items-center justify-center overflow-hidden'>
-        <div className='bg-alpha-pure shadow-md rounded my-6'>
-          <table className='w-full'>
+      <div className='w-full mb-12 px-4 overflow-hidden'>
+        <div className='shadow-md rounded my-6 overflow-x-auto'>
+          <table className='w-full bg-alpha-pure dark:bg-darkAlpha-minor'>
             <thead>
-              <tr className='bg-gray-200 text-gray-600 uppercase text-sm leading-normal'>
+              <tr className='bg-beta-major dark:bg-darkBeta text-alpha-major dark:text-darkAlpha-major uppercase text-sm leading-normal'>
                 <th className='py-3 px-6 text-left'>{props.title}</th>
                 <th className='py-3 px-6 text-left'>Start Date</th>
                 <th className='py-3 px-6 text-center'>Duration</th>
@@ -15,8 +15,8 @@ const EventTable = (props) => {
                 <th className='py-3 px-6 text-center'>Actions</th>
               </tr>
             </thead>
-            <tbody className='text-gray-600 text-sm overflow-y-scroll w-full'>
-              <tr className='border-b border-gray-200 hover:bg-gray-100'>
+            <tbody className='text-darkAlpha-mid dark:text-alpha-mid text-sm overflow-y-auto w-full'>
+              <tr className='border-b border-alpha dark:border-darkAlpha hover:bg-alpha-major dark:hover:bg-darkAlpha'>
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
@@ -37,15 +37,15 @@ const EventTable = (props) => {
                 <td className='py-3 px-6 text-center'>
                   <div className='flex items-center justify-center'>
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/men/1.jpg'
                     />
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border -m-1 transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/women/2.jpg'
                     />
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border -m-1 transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/men/3.jpg'
                     />
                   </div>
@@ -83,7 +83,7 @@ const EventTable = (props) => {
                   </div>
                 </td>
               </tr>
-              <tr className='border-b border-gray-200 hover:bg-gray-100'>
+              <tr className='border-b border-alpha dark:border-darkAlpha hover:bg-alpha-major dark:hover:bg-darkAlpha'>
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
@@ -104,15 +104,15 @@ const EventTable = (props) => {
                 <td className='py-3 px-6 text-center'>
                   <div className='flex items-center justify-center'>
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/men/1.jpg'
                     />
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border -m-1 transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/women/2.jpg'
                     />
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border -m-1 transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/men/3.jpg'
                     />
                   </div>
@@ -150,7 +150,7 @@ const EventTable = (props) => {
                   </div>
                 </td>
               </tr>
-              <tr className='border-b border-gray-200 hover:bg-gray-100'>
+              <tr className='border-b border-alpha dark:border-darkAlpha hover:bg-alpha-major dark:hover:bg-darkAlpha'>
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
@@ -171,15 +171,15 @@ const EventTable = (props) => {
                 <td className='py-3 px-6 text-center'>
                   <div className='flex items-center justify-center'>
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/men/1.jpg'
                     />
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border -m-1 transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/women/2.jpg'
                     />
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border -m-1 transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/men/3.jpg'
                     />
                   </div>
@@ -217,7 +217,7 @@ const EventTable = (props) => {
                   </div>
                 </td>
               </tr>
-              <tr className='border-b border-gray-200 hover:bg-gray-100'>
+              <tr className='border-b border-alpha dark:border-darkAlpha hover:bg-alpha-major dark:hover:bg-darkAlpha'>
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
@@ -238,15 +238,15 @@ const EventTable = (props) => {
                 <td className='py-3 px-6 text-center'>
                   <div className='flex items-center justify-center'>
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/men/1.jpg'
                     />
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border -m-1 transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/women/2.jpg'
                     />
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border -m-1 transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/men/3.jpg'
                     />
                   </div>
@@ -284,7 +284,7 @@ const EventTable = (props) => {
                   </div>
                 </td>
               </tr>
-              <tr className='border-b border-gray-200 hover:bg-gray-100'>
+              <tr className='border-b border-alpha dark:border-darkAlpha hover:bg-alpha-major dark:hover:bg-darkAlpha'>
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
@@ -305,15 +305,15 @@ const EventTable = (props) => {
                 <td className='py-3 px-6 text-center'>
                   <div className='flex items-center justify-center'>
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/men/1.jpg'
                     />
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border -m-1 transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/women/2.jpg'
                     />
                     <img
-                      className='w-6 h-6 rounded-full border-gray-200 border -m-1 transform hover:scale-125'
+                      className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha border -m-1 transform hover:scale-125'
                       src='https://randomuser.me/api/portraits/men/3.jpg'
                     />
                   </div>
