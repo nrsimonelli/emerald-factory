@@ -4,10 +4,10 @@ const EventTable = (props) => {
   return (
     <>
       <div className='w-full mb-12 px-4 overflow-hidden'>
-        <div className='shadow-md rounded my-6 overflow-x-auto'>
+        <div className='max-h-60 shadow-md rounded my-6 overflow-auto'>
           <table className='w-full bg-alpha-pure dark:bg-darkAlpha'>
             <thead>
-              <tr className='bg-beta-major dark:bg-darkBeta text-alpha-major dark:text-darkAlpha-major uppercase text-sm leading-normal'>
+              <tr className='sticky z-10 top-0 bg-beta-major dark:bg-darkBeta text-alpha-major dark:text-darkAlpha-major uppercase text-sm leading-normal'>
                 <th className='py-3 px-6 text-left'>{props.title}</th>
                 <th className='py-3 px-6 text-left'>Start Date</th>
                 <th className='py-3 px-6 text-center'>Duration</th>
@@ -15,7 +15,7 @@ const EventTable = (props) => {
                 <th className='py-3 px-6 text-center'>Actions</th>
               </tr>
             </thead>
-            <tbody className='text-darkAlpha-mid dark:text-alpha-mid text-sm overflow-y-auto w-full'>
+            <tbody className='text-darkAlpha-mid dark:text-alpha-mid text-sm overflow-y-scroll w-full'>
               <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha-major dark:hover:bg-darkAlpha-minor'>
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
