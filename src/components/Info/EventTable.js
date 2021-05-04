@@ -3,9 +3,9 @@ import React from 'react';
 const EventTable = (props) => {
   return (
     <>
-      <div className='w-full mb-12 px-4 overflow-hidden'>
+      <div className='w-full mb-6 px-4 overflow-hidden'>
         <div className='max-h-60 shadow-md rounded my-6 overflow-auto'>
-          <table className='w-full bg-alpha-pure dark:bg-darkAlpha'>
+          <table className='w-full bg-alpha-major dark:bg-darkAlpha'>
             <thead>
               <tr className='sticky z-10 top-0 bg-beta-major dark:bg-darkBeta text-alpha-major dark:text-darkAlpha-major uppercase text-sm leading-normal'>
                 <th className='py-3 px-6 text-left'>{props.title}</th>
@@ -16,7 +16,7 @@ const EventTable = (props) => {
               </tr>
             </thead>
             <tbody className='text-darkAlpha-mid dark:text-alpha-mid text-sm overflow-y-scroll w-full'>
-              <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha-major dark:hover:bg-darkAlpha-minor'>
+              <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha dark:hover:bg-darkAlpha-minor'>
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
@@ -83,7 +83,7 @@ const EventTable = (props) => {
                   </div>
                 </td>
               </tr>
-              <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha-major dark:hover:bg-darkAlpha-minor'>
+              <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha dark:hover:bg-darkAlpha-minor'>
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
@@ -150,7 +150,7 @@ const EventTable = (props) => {
                   </div>
                 </td>
               </tr>
-              <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha-major dark:hover:bg-darkAlpha-minor'>
+              <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha dark:hover:bg-darkAlpha-minor'>
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
@@ -217,7 +217,7 @@ const EventTable = (props) => {
                   </div>
                 </td>
               </tr>
-              <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha-major dark:hover:bg-darkAlpha-minor'>
+              <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha dark:hover:bg-darkAlpha-minor'>
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
@@ -284,7 +284,7 @@ const EventTable = (props) => {
                   </div>
                 </td>
               </tr>
-              <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha-major dark:hover:bg-darkAlpha-minor'>
+              <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha dark:hover:bg-darkAlpha-minor'>
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
