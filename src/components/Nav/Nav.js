@@ -61,7 +61,7 @@ const Nav = () => {
           </div>
           <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
             <div className='flex-shrink-0 flex items-center'>
-              <Link to='/dashboard'>
+              <Link to='/'>
                 <GiCutDiamond className='block lg:hidden h-8 w-auto text-alpha-pure dark:text-darkAlpha-major' />
                 <GiCutDiamond className='hidden lg:block h-8 w-auto text-alpha-pure dark:text-darkAlpha-major' />
               </Link>
@@ -70,18 +70,18 @@ const Nav = () => {
               <div className='flex space-x-4'>
                 {/* // Current: "bg-darkAlpha-major text-alpha-pure", Default: "text-alpha-minor hover:bg-darkAlpha-minor hover:text-alpha-pure" // */}
                 <Link to='/tournament'>
-                  <div className='text-alpha-minor hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
+                  <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     Tournaments
                   </div>
                 </Link>
                 <Link to='/'>
-                  <div className='text-alpha-minor hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
+                  <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     League
                   </div>
                 </Link>
 
                 <Link to='/color'>
-                  <div className='text-alpha-minor hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
+                  <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     Support
                   </div>
                 </Link>
