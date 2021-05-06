@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const EventTable = (props) => {
   return (
@@ -20,7 +21,12 @@ const EventTable = (props) => {
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
-                    <span className='font-medium'>React Project</span>
+                    <Link to='/tournament/1'>
+                      {' '}
+                      <span className='font-medium'>
+                        React Project
+                      </span>
+                    </Link>
                   </div>
                 </td>
                 <td className='py-3 px-6 text-left'>
