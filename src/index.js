@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-import { ThemeProvider } from './components/ThemeContext/ThemeContext';
-import ThemeBackground from './components/ThemeBackground/ThemeBackground';
+import { ThemeProvider } from './components/Theme/ThemeContext';
+import ThemeBackground from './components/Theme/ThemeBackground';
 
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
@@ -12,9 +12,6 @@ import logger from 'redux-logger';
 
 import rootReducer from './redux/reducers';
 import rootSaga from './redux/sagas';
-
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
 
 import App from './components/App/App';
 

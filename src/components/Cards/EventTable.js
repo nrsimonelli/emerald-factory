@@ -21,11 +21,8 @@ const EventTable = (props) => {
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
-                    <Link to='/tournament/1'>
-                      {' '}
-                      <span className='font-medium'>
-                        React Project
-                      </span>
+                    <Link to='/events/1'>
+                      <span className='font-medium'>Event Title</span>
                     </Link>
                   </div>
                 </td>
@@ -34,17 +31,17 @@ const EventTable = (props) => {
                     <div className='mr-2'>
                       <img
                         className='w-6 h-6 rounded-full'
-                        src='https://randomuser.me/api/portraits/men/1.jpg'
+                        src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
                       />
                     </div>
-                    <span>Eshal Rosas</span>
+                    <span>Event Date</span>
                   </div>
                 </td>
                 <td className='py-3 px-6 text-center'>
                   <div className='flex items-center justify-center'>
                     <img
                       className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor border transform hover:scale-125'
-                      src='https://randomuser.me/api/portraits/men/1.jpg'
+                      src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
                     />
                     <img
                       className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor border -m-1 transform hover:scale-125'
@@ -93,7 +90,7 @@ const EventTable = (props) => {
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
-                    <span className='font-medium'>React Project</span>
+                    <span className='font-medium'>Event Title</span>
                   </div>
                 </td>
                 <td className='py-3 px-6 text-left'>
@@ -101,17 +98,17 @@ const EventTable = (props) => {
                     <div className='mr-2'>
                       <img
                         className='w-6 h-6 rounded-full'
-                        src='https://randomuser.me/api/portraits/men/1.jpg'
+                        src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
                       />
                     </div>
-                    <span>Eshal Rosas</span>
+                    <span>Event Date</span>
                   </div>
                 </td>
                 <td className='py-3 px-6 text-center'>
                   <div className='flex items-center justify-center'>
                     <img
                       className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor border transform hover:scale-125'
-                      src='https://randomuser.me/api/portraits/men/1.jpg'
+                      src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
                     />
                     <img
                       className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor border -m-1 transform hover:scale-125'
@@ -160,7 +157,7 @@ const EventTable = (props) => {
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
-                    <span className='font-medium'>React Project</span>
+                    <span className='font-medium'>Event Title</span>
                   </div>
                 </td>
                 <td className='py-3 px-6 text-left'>
@@ -168,17 +165,17 @@ const EventTable = (props) => {
                     <div className='mr-2'>
                       <img
                         className='w-6 h-6 rounded-full'
-                        src='https://randomuser.me/api/portraits/men/1.jpg'
+                        src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
                       />
                     </div>
-                    <span>Eshal Rosas</span>
+                    <span>Event Date</span>
                   </div>
                 </td>
                 <td className='py-3 px-6 text-center'>
                   <div className='flex items-center justify-center'>
                     <img
                       className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor border transform hover:scale-125'
-                      src='https://randomuser.me/api/portraits/men/1.jpg'
+                      src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
                     />
                     <img
                       className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor border -m-1 transform hover:scale-125'
@@ -227,7 +224,7 @@ const EventTable = (props) => {
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
-                    <span className='font-medium'>React Project</span>
+                    <span className='font-medium'>Event Title</span>
                   </div>
                 </td>
                 <td className='py-3 px-6 text-left'>
@@ -235,17 +232,17 @@ const EventTable = (props) => {
                     <div className='mr-2'>
                       <img
                         className='w-6 h-6 rounded-full'
-                        src='https://randomuser.me/api/portraits/men/1.jpg'
+                        src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
                       />
                     </div>
-                    <span>Eshal Rosas</span>
+                    <span>Event Date</span>
                   </div>
                 </td>
                 <td className='py-3 px-6 text-center'>
                   <div className='flex items-center justify-center'>
                     <img
                       className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor border transform hover:scale-125'
-                      src='https://randomuser.me/api/portraits/men/1.jpg'
+                      src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
                     />
                     <img
                       className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor border -m-1 transform hover:scale-125'
@@ -294,7 +291,7 @@ const EventTable = (props) => {
                 <td className='py-3 px-6 text-left whitespace-nowrap'>
                   <div className='flex items-center'>
                     <div className='mr-2'></div>
-                    <span className='font-medium'>React Project</span>
+                    <span className='font-medium'>Event Title</span>
                   </div>
                 </td>
                 <td className='py-3 px-6 text-left'>
@@ -302,17 +299,17 @@ const EventTable = (props) => {
                     <div className='mr-2'>
                       <img
                         className='w-6 h-6 rounded-full'
-                        src='https://randomuser.me/api/portraits/men/1.jpg'
+                        src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
                       />
                     </div>
-                    <span>Eshal Rosas</span>
+                    <span>Event Date</span>
                   </div>
                 </td>
                 <td className='py-3 px-6 text-center'>
                   <div className='flex items-center justify-center'>
                     <img
                       className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor border transform hover:scale-125'
-                      src='https://randomuser.me/api/portraits/men/1.jpg'
+                      src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
                     />
                     <img
                       className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor border -m-1 transform hover:scale-125'

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import {
   BrowserRouter,
@@ -7,31 +7,35 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import Tournament from '../Tournament/Tournament';
-import Home from '../Home/Home';
+import Event from '../Event/Event';
+import Game from '../Game/Game';
+import Hero from '../Hero/Hero';
+import Leader from '../Leader/Leader';
+import Player from '../Player/Player';
 import Profile from '../Profile/Profile';
-import Dashboard from '../Dashboard/Dashboard';
-import EventDetails from '../Info/EventDetails';
-import GameDetails from '../Info/GameDetails';
+import Tournament from '../Tournament/Tournament';
+
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
 const App = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 2000,
+    });
+    AOS.refresh();
+  }, []);
+
   return (
     <BrowserRouter>
       <Switch>
-        <Route
-          path='/tournament/:name/game/:id'
-          exact
-          component={GameDetails}
-        />
-        <Route
-          path='/tournament/:name'
-          exact
-          component={EventDetails}
-        />
-        <Route path='/tournament' exact component={Tournament} />
+        <Route path='/events/:name/game/:id' exact component={Game} />
+        <Route path='/events/:name' exact component={Event} />
+        <Route path='/events' exact component={Tournament} />
+        <Route path='/players/:name' exact component={Player} />
+        <Route path='/players' exact component={Leader} />
         <Route path='/profile' exact component={Profile} />
-        <Route path='/dashboard' exact component={Dashboard} />
-        <Route path='/' exact component={Home} />
+        <Route path='/' exact component={Hero} />
         <Redirect from='*' to='/' />
       </Switch>
     </BrowserRouter>

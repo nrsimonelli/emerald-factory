@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from '../Nav/Nav';
 
-const Profile = () => {
+const Game = () => {
   return (
     <>
       <Nav />
@@ -10,4 +10,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export default Game;

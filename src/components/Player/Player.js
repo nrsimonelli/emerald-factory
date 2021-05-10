@@ -1,13 +1,13 @@
 import React from 'react';
 import Nav from '../Nav/Nav';
 
-const Profile = () => {
+const Player = () => {
   return (
     <>
       <Nav />
-      <div>Game Stats</div>
+      <div>Player Stats</div>
     </>
   );
 };
 
-export default Profile;
+export default Player;

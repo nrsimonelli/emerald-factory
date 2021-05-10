@@ -82,6 +82,43 @@ module.exports = {
         mid: colors.red['600'],
       },
 
+      positive: {
+        major: colors.green['400'],
+        DEFAULT: colors.green['500'],
+        minor: colors.green['600'],
+        mid: colors.green['700'],
+      },
+      darkPositive: {
+        major: colors.green['300'],
+        DEFAULT: colors.green['400'],
+        minor: colors.green['500'],
+        mid: colors.green['600'],
+      },
+      negative: {
+        major: colors.red['400'],
+        DEFAULT: colors.red['500'],
+        minor: colors.red['600'],
+        mid: colors.red['700'],
+      },
+      darkNegative: {
+        major: colors.red['300'],
+        DEFAULT: colors.red['400'],
+        minor: colors.red['500'],
+        mid: colors.red['600'],
+      },
+      warning: {
+        major: colors.yellow['400'],
+        DEFAULT: colors.yellow['500'],
+        minor: colors.yellow['600'],
+        mid: colors.yellow['700'],
+      },
+      darkWarning: {
+        major: colors.yellow['300'],
+        DEFAULT: colors.yellow['400'],
+        minor: colors.yellow['500'],
+        mid: colors.yellow['600'],
+      },
+
       warmGray: colors.warmGray,
       coolGray: colors.coolGray,
       blueGray: colors.blueGray,

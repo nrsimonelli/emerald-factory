@@ -1,13 +1,13 @@
 import React from 'react';
 import Nav from '../Nav/Nav';
 
-const Profile = () => {
+const Event = () => {
   return (
     <>
       <Nav />
-      <div>Game Stats</div>
+      <div>Event Overview</div>
     </>
   );
 };
 
-export default Profile;
+export default Event;

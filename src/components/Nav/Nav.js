@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Transition } from '@headlessui/react';
 
-import ThemeToggle from '../ThemeToggle/ThemeToggle';
+import ThemeToggle from '../Theme/ThemeToggle';
 import { SiDiscord } from 'react-icons/si';
 import { GiCutDiamond } from 'react-icons/gi';
 
@@ -69,18 +69,18 @@ const Nav = () => {
             <div className='hidden sm:block sm:ml-6'>
               <div className='flex space-x-4'>
                 {/* // Current: "bg-darkAlpha-major text-alpha-pure", Default: "text-alpha-minor hover:bg-darkAlpha-minor hover:text-alpha-pure" // */}
-                <Link to='/tournament'>
+                <Link to='/events'>
                   <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     Tournaments
                   </div>
                 </Link>
-                <Link to='/'>
+                <Link to='/players'>
                   <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     League
                   </div>
                 </Link>
 
-                <Link to='/color'>
+                <Link to='/'>
                   <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     Support
                   </div>
@@ -165,13 +165,13 @@ const Nav = () => {
         {(ref) => (
           <div className='sm:hidden' id='mobile-menu'>
             <div className='px-2 pt-2 pb-3 space-y-1'>
-              <Link to='/tournament'>
+              <Link to='/events'>
                 <div className='text-alpha-minor hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
                   Tournaments
                 </div>
               </Link>
 
-              <Link to='/'>
+              <Link to='/players'>
                 <div className='text-alpha-minor hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
                   League
                 </div>
