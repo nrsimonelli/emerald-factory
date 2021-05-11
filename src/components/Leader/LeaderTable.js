@@ -1,7 +1,52 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const LeaderTable = (props) => {
+const LeaderTable = () => {
+  const players = [
+    {
+      rank: '1',
+      name: 'JoyDivision',
+      image:
+        'https://play.nintendo.com/images/Masthead_Kirby.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png',
+      faction: 'Crimea',
+      mat: 'Industrial',
+      wins: '52',
+      losses: '6',
+      total: '58',
+      winRate: '96%',
+      elo: '1978',
+    },
+    {
+      rank: '2',
+      name: 'N0ne',
+      image:
+        'https://play.nintendo.com/images/Masthead_Kirby.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png',
+
+      faction: 'Nordic',
+      mat: 'Innovative',
+      wins: '45',
+      losses: '2',
+      total: '47',
+      winRate: '97%',
+      elo: '1971',
+    },
+    {
+      rank: '3',
+      name: 'bbScythe',
+      image:
+        'https://play.nintendo.com/images/Masthead_Kirby.17345b1513ac044897cfc243542899dce541e8dc.9afde10b.png',
+
+      faction: 'Rusviet',
+      mat: 'Mechanical',
+      wins: '37',
+      losses: '7',
+      total: '47',
+      winRate: '97%',
+      elo: '1971',
+    },
+    // More people...
+  ];
+
   return (
     <>
       <div className='w-full mb-6 px-4 overflow-hidden'>
@@ -21,66 +66,73 @@ const LeaderTable = (props) => {
               </tr>
             </thead>
             <tbody className='text-darkAlpha-mid dark:text-alpha-mid text-sm overflow-y-scroll w-full'>
-              <tr className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha dark:hover:bg-darkAlpha-minor'>
-                <td className='py-3 px-6 text-left whitespace-nowrap'>
-                  <div className='flex items-center'>
-                    <div>1</div>
-                  </div>
-                </td>
-                <td className='py-3 px-6 text-left'>
-                  <div className='flex items-center'>
-                    <div className='mr-2'>
-                      <Link to='/players/1'>
-                        <img
-                          className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor transform hover:scale-125'
-                          src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
-                        />
+              {players.map((player) => (
+                <tr
+                  key={player.name}
+                  className='border-b border-alpha dark:border-darkAlpha-minor hover:bg-alpha dark:hover:bg-darkAlpha-minor'
+                >
+                  <td className='py-3 px-6 text-left whitespace-nowrap'>
+                    <div className='flex items-center'>
+                      <div>{player.rank}</div>
+                    </div>
+                  </td>
+                  <td className='py-3 px-6 text-left'>
+                    <div className='flex items-center'>
+                      <div className='flex-shrink-0 h-8 w-8 mr-2'>
+                        <Link to={`/players/${player.name}`}>
+                          <img
+                            className='w-8 h-8 rounded-full border-alpha dark:border-darkAlpha-minor transform hover:scale-125'
+                            src={player.image}
+                            alt=''
+                          />
+                        </Link>
+                      </div>
+                      <Link to={`/players/${player.name}`}>
+                        <span>{player.name}</span>
                       </Link>
                     </div>
-                    <Link to='/players/1'>
-                      <span>Player Name</span>
-                    </Link>
-                  </div>
-                </td>
-                <td className='py-3 px-6 text-left'>
-                  <div className='flex items-center'>
-                    <div className='mr-2'>
-                      <img
-                        className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor'
-                        src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
-                      />
+                  </td>
+                  <td className='py-3 px-6 text-left'>
+                    <div className='flex items-center'>
+                      <div className='mr-2'>{player.faction}</div>
                     </div>
-                  </div>
-                </td>
-                <td className='py-3 px-6 text-left'>
-                  <div className='flex items-center'>
-                    <div className='mr-2'>
-                      <img
-                        className='w-6 h-6 rounded-full border-alpha dark:border-darkAlpha-minor'
-                        src='https://ssb.wiki.gallery/images/thumb/a/ae/Kirby_SSBB.jpg/250px-Kirby_SSBB.jpg'
-                      />
+                  </td>
+                  <td className='py-3 px-6 text-left'>
+                    <div className='flex items-center'>
+                      <div className='mr-2'>{player.mat}</div>
                     </div>
-                  </div>
-                </td>
-                <td className='py-3 px-6 text-center text-positive dark:text-darkPositive'>
-                  <div>56</div>
-                </td>
-                <td className='py-3 px-6 text-center text-negative dark:text-darkNegative'>
-                  <div>4</div>
-                </td>
-                <td className='py-3 px-6 text-center'>
-                  <div>60</div>
-                </td>
-                <td className='py-3 px-6 text-center text-warning dark:text-darkWarning'>
-                  <div>95%</div>
-                </td>
+                  </td>
+                  <td className='py-3 px-6 text-center text-positive dark:text-darkPositive'>
+                    <div>{player.wins}</div>
+                  </td>
+                  <td className='py-3 px-6 text-center text-negative dark:text-darkNegative'>
+                    <div>{player.losses}</div>
+                  </td>
+                  <td className='py-3 px-6 text-center'>
+                    <div>
+                      {Number(`${player.wins}`) +
+                        Number(`${player.losses}`)}
+                    </div>
+                  </td>
+                  <td className='py-3 px-6 text-center text-warning dark:text-darkWarning'>
+                    <div>
+                      {(
+                        (Number(`${player.wins}`) /
+                          (Number(`${player.wins}`) +
+                            Number(`${player.losses}`))) *
+                        100
+                      ).toFixed(1)}
+                      %
+                    </div>
+                  </td>
 
-                <td className='py-3 px-6 text-center'>
-                  <span className='bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs'>
-                    hmm
-                  </span>
-                </td>
-              </tr>
+                  <td className='py-3 px-6 text-center'>
+                    <span className='bg-purple-100 text-purple-800 py-1 px-3 rounded-full text-xs'>
+                      {player.elo}
+                    </span>
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
