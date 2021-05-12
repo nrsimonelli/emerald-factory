@@ -77,11 +77,11 @@ const LeaderTable = () => {
                     </div>
                   </td>
                   <td className='py-3 px-6 text-left'>
-                    <div className='flex items-center'>
+                    <div className='flex items-center hover:text-beta dark:hover:text-darkPositive'>
                       <div className='flex-shrink-0 h-8 w-8 mr-2'>
                         <Link to={`/players/${player.name}`}>
                           <img
-                            className='w-8 h-8 rounded-full border-alpha dark:border-darkAlpha-minor transform hover:scale-125'
+                            className='w-8 h-8 rounded-full border-alpha dark:border-darkAlpha-minor'
                             src={player.image}
                             alt=''
                           />
