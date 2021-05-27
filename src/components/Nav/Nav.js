@@ -76,7 +76,7 @@ const Nav = () => {
                 </Link>
                 <Link to='/players'>
                   <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
-                    League
+                    Leaderboard
                   </div>
                 </Link>
 
@@ -173,7 +173,7 @@ const Nav = () => {
 
               <Link to='/players'>
                 <div className='text-alpha-minor hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
-                  League
+                  Leaderboard
                 </div>
               </Link>
 
