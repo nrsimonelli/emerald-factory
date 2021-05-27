@@ -5,7 +5,11 @@ const Player = () => {
   return (
     <>
       <Nav />
-      <div>Player Stats</div>
+      <div className='flex justify-center items-center mt-12'>
+        <h1 className='bg-clip-text text-transparent bg-gradient-to-r from-blackFade-light to-blackFade-dark dark:from-whiteFade-light dark:to-whiteFade-dark text-3xl sm:text-5xl lg:text-6xl leading-none font-extrabold tracking-tight mb-6 pb-1'>
+          Player Stats
+        </h1>
+      </div>
     </>
   );
 };

@@ -40,7 +40,7 @@ const About = () => {
             </h6>
             <p className='mt-2 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
               Deepen your understanding of the game by taking
-              advantage the community's rich library.
+              advantage the community's rich knowledge base.
             </p>
           </div>
           <div className='w-full md:w-7/12 lg:w-3/12 px-4 text-center'>
@@ -56,7 +56,7 @@ const About = () => {
             </h5>
             <p className='mt-2 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
               Challenge yourself against top players from around the
-              world and push your game to the next level.
+              world, take your game to the next level.
             </p>
           </div>
           <div className='w-full md:w-7/12 lg:w-3/12 px-4 text-center'>
@@ -71,8 +71,8 @@ const About = () => {
               Support
             </h5>
             <p className='mt-2 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
-              Be a part of something amazing and help lift up those
-              around you.
+              Be a part of something new and exciting! Help lift up
+              those around you.
             </p>
           </div>
         </div>

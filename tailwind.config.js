@@ -13,6 +13,14 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
+      whiteFade: {
+        light: '#f5f7fa',
+        dark: '#c3cfe2',
+      },
+      blackFade: {
+        light: '#434343',
+        dark: '#000000',
+      },
 
       alpha: {
         pure: colors.white,
