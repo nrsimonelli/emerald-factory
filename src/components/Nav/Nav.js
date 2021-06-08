@@ -105,7 +105,7 @@ const Nav = () => {
                   aria-haspopup='true'
                 >
                   <span className='sr-only'>Open user menu</span>
-                  <SiDiscord className='h-8 w-8 text-alpha-pure dark:text-darkAlpha-major bg-gradient-to-br from-betaMax to-betaMin dark:from-darkBetaMax dark:to-darkBetaMin' />
+                  <SiDiscord className='h-8 w-8 text-alpha-pure dark:text-darkAlpha-major bg-gradient-to-br from-beta to-betaMax dark:from-darkBeta dark:to-darkBetaMax' />
                 </button>
               </div>
 
