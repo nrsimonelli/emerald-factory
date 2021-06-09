@@ -5,3 +5,10 @@
 html {
   scroll-behavior: smooth;
 }
+
+:root.dark #visual > path {
+  fill: rgba(17, 24, 39, 1);
+}
+:root.light #visual > path {
+  fill: rgba(243, 244, 246, 1);
+}
