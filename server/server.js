@@ -4,6 +4,7 @@ const app = express();
 
 // Route includes
 const eventRouter = require('./routes/event.router');
+const authRouter = require('./routes/auth.router');
 
 // Parser middleware
 app.use(express.json());
@@ -11,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // Routes
 app.use('/api/events', eventRouter);
+app.use('/api/auth', authRouter);
 
 // Serve static files
 app.use(express.static('build'));
