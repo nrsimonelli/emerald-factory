@@ -1,10 +1,10 @@
-import { Pool } from 'pg';
-import { parse } from 'url';
+const pg = require('pg');
+const url = require('url');
 
 let config = {};
 
 if (process.env.DATABASE_URL) {
-  const params = parse(process.env.DATABASE_URL);
+  const params = url.parse(process.env.DATABASE_URL);
   const auth = params.auth.split(':');
 
   config = {
@@ -27,11 +27,11 @@ if (process.env.DATABASE_URL) {
   };
 }
 
-const pool = new Pool(config);
+const pool = new pg.Pool(config);
 
 pool.on('error', (err) => {
   console.log('Unexpected error on idle client', err);
   process.exit(-1);
 });
 
-export default pool;
+module.exports = pool;
