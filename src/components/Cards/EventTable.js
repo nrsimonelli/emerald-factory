@@ -97,17 +97,17 @@ const EventTable = (props) => {
                   <div className='flex items-center justify-center'>
                     <Link to='/events/1'>
                       <div className='w-6 h-6 ml-1 transform hover:text-purple-500 hover:scale-110'>
-                        <FaEye size='lg' />
+                        <FaEye size='20' />
                       </div>
                     </Link>
                     <Link to='/events/1'>
                       <div className='w-6 h-6 ml-1 transform hover:text-purple-500 hover:scale-110'>
-                        <FaUserCheck size='lg' />
+                        <FaUserCheck size='20' />
                       </div>
                     </Link>
                     <Link to='/events/1'>
                       <div className='w-6 h-6 ml-1 transform hover:text-purple-500 hover:scale-110'>
-                        <FaUsers size='lg' />
+                        <FaUsers size='20' />
                       </div>
                     </Link>
                   </div>

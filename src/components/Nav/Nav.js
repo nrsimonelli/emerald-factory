@@ -1,14 +1,47 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Transition } from '@headlessui/react';
+import { GiCutDiamond } from 'react-icons/gi';
+import { FiLogIn, FiLogOut } from 'react-icons/fi';
 
 import ThemeToggle from '../Theme/ThemeToggle';
-import { SiDiscord } from 'react-icons/si';
-import { GiCutDiamond } from 'react-icons/gi';
+import ProfileButton from './ProfileButton';
 
-const Nav = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isProfileOpen, setIsProfileOpen] = useState(false);
+import { connect, useDispatch } from 'react-redux';
+
+const Nav = (props) => {
+  const dispatch = useDispatch();
+
+  const closeIfOpen = () => {
+    if (props.menu.mobile) {
+      dispatch({ type: 'CLOSE_MENU' });
+    }
+    if (props.menu.profile) {
+      dispatch({ type: 'CLOSE_PROFILE' });
+    }
+  };
+
+  const mobileMenuToggle = () => {
+    if (props.menu.mobile) {
+      dispatch({ type: 'CLOSE_MENU' });
+    }
+    if (!props.menu.mobile) {
+      dispatch({ type: 'OPEN_MENU' });
+    }
+  };
+
+  const profileMenuToggle = () => {
+    if (props.menu.profile) {
+      dispatch({
+        type: 'CLOSE_PROFILE',
+      });
+    }
+    if (!props.menu.profile) {
+      dispatch({
+        type: 'OPEN_PROFILE',
+      });
+    }
+  };
 
   return (
     <nav className='bg-gradient-to-br from-betaMin to-betaMax dark:from-darkBetaMin dark:to-darkBetaMax'>
@@ -17,14 +50,16 @@ const Nav = () => {
           <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
             {/* // Mobile menu button */}
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {
+                mobileMenuToggle();
+              }}
               type='button'
-              className='inline-flex items-center justify-center p-2 rounded-md text-alpha-major hover:text-alpha-pure dark:text-alpha-minor dark:hover:alpha-major  focus:outline-none focus:ring-2 focus:ring-inset focus:ring-alpha-pure'
+              className='inline-flex items-center justify-center p-2 rounded-md text-alpha dark:text-darkAlpha focus:outline-none focus:ring-2 focus:ring-inset focus:ring-alpha-major'
               aria-controls='mobile-menu'
               aria-expanded='false'
             >
               <span className='sr-only'>Open main menu</span>
-              {!isMenuOpen ? (
+              {!props.menu.mobile ? (
                 <svg
                   className='block h-6 w-6'
                   xmlns='http://www.w3.org/2000/svg'
@@ -34,9 +69,9 @@ const Nav = () => {
                   aria-hidden='true'
                 >
                   <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
                     d='M4 6h16M4 12h16M4 18h16'
                   />
                 </svg>
@@ -50,9 +85,9 @@ const Nav = () => {
                   aria-hidden='true'
                 >
                   <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    stroke-width='2'
+                    strokeLinecap='round'
+                    strokeLinejoin='round'
+                    strokeWidth='2'
                     d='M6 18L18 6M6 6l12 12'
                   />
                 </svg>
@@ -61,26 +96,45 @@ const Nav = () => {
           </div>
           <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
             <div className='flex-shrink-0 flex items-center'>
-              <Link to='/'>
+              <Link
+                to='/'
+                onClick={() => {
+                  closeIfOpen();
+                }}
+              >
                 <GiCutDiamond className='block lg:hidden h-8 w-auto text-alpha-pure dark:text-darkAlpha-major' />
                 <GiCutDiamond className='hidden lg:block h-8 w-auto text-alpha-pure dark:text-darkAlpha-major' />
               </Link>
             </div>
             <div className='hidden sm:block sm:ml-6'>
               <div className='flex space-x-4'>
-                {/* // Current: "bg-darkAlpha-major text-alpha-pure", Default: "text-alpha-minor hover:bg-darkAlpha-minor hover:text-alpha-pure" // */}
-                <Link to='/events'>
+                <Link
+                  to='/events'
+                  onClick={() => {
+                    closeIfOpen();
+                  }}
+                >
                   <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     Tournaments
                   </div>
                 </Link>
-                <Link to='/players'>
+                <Link
+                  to='/players'
+                  onClick={() => {
+                    closeIfOpen();
+                  }}
+                >
                   <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     Leaderboard
                   </div>
                 </Link>
 
-                <Link to='/'>
+                <Link
+                  to='/'
+                  onClick={() => {
+                    closeIfOpen();
+                  }}
+                >
                   <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
                     Support
                   </div>
@@ -94,23 +148,13 @@ const Nav = () => {
             {/* // Profile dropdown // */}
             <div className='ml-3 relative'>
               <div>
-                <button
-                  onClick={() => {
-                    setIsProfileOpen(!isProfileOpen);
-                  }}
-                  type='button'
-                  className='bg-darkAlpha flex text-sm focus:outline-none'
-                  id='user-menu'
-                  aria-expanded='false'
-                  aria-haspopup='true'
-                >
-                  <span className='sr-only'>Open user menu</span>
-                  <SiDiscord className='h-8 w-8 text-alpha-pure dark:text-darkAlpha-major bg-gradient-to-br from-beta to-betaMax dark:from-darkBeta dark:to-darkBetaMax' />
-                </button>
+                <ProfileButton
+                  profileMenuToggle={profileMenuToggle}
+                />
               </div>
 
               <Transition
-                show={isProfileOpen}
+                show={props.menu.profile}
                 enter='transition ease-out duration-100 transform'
                 enterFrom='opacity-0 scale-95'
                 enterTo='opacity-100 scale-100'
@@ -125,21 +169,22 @@ const Nav = () => {
                   aria-labelledby='user-menu'
                 >
                   <a
-                    href='#'
+                    href='/'
                     className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
                     role='menuitem'
                   >
                     Your Profile
                   </a>
                   <a
-                    href='#'
+                    href='/'
                     className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
                     role='menuitem'
                   >
                     Settings
                   </a>
+
                   <a
-                    href='#'
+                    href='/'
                     className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
                     role='menuitem'
                   >
@@ -153,7 +198,7 @@ const Nav = () => {
       </div>
 
       <Transition
-        show={isMenuOpen}
+        show={props.menu.mobile}
         enter='transition ease-out duration-100 transform'
         enterFrom='opacity-0 scale-95'
         enterTo='opacity-100 scale-100'
@@ -165,20 +210,35 @@ const Nav = () => {
         {(ref) => (
           <div className='sm:hidden' id='mobile-menu'>
             <div className='px-2 pt-2 pb-3 space-y-1'>
-              <Link to='/events'>
-                <div className='text-alpha-minor hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
+              <Link
+                to='/events'
+                onClick={() => {
+                  closeIfOpen();
+                }}
+              >
+                <div className='text-alpha hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
                   Tournaments
                 </div>
               </Link>
 
-              <Link to='/players'>
-                <div className='text-alpha-minor hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
+              <Link
+                to='/players'
+                onClick={() => {
+                  closeIfOpen();
+                }}
+              >
+                <div className='text-alpha hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
                   Leaderboard
                 </div>
               </Link>
 
-              <Link to='/'>
-                <div className='text-alpha-minor hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
+              <Link
+                to='/'
+                onClick={() => {
+                  closeIfOpen();
+                }}
+              >
+                <div className='text-alpha hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
                   Support
                 </div>
               </Link>
@@ -190,4 +250,9 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+const mapReduxStateToProps = (reduxState) => ({
+  menu: reduxState.menuReducer,
+  user: reduxState.userReducer,
+});
+
+export default connect(mapReduxStateToProps)(Nav);

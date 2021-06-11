@@ -12,8 +12,8 @@ const BlockInfo = () => {
       >
         <path
           d='M0 117L900 305L900 0L0 0Z'
-          stroke-linecap='square'
-          stroke-linejoin='bevel'
+          strokeLinecap='square'
+          strokeLinejoin='bevel'
         ></path>
       </svg>
     </div>
