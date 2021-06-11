@@ -184,7 +184,7 @@ const Nav = (props) => {
                   </a>
 
                   <a
-                    href='/'
+                    href='http://localhost:5000/api/auth/login'
                     className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
                     role='menuitem'
                   >
