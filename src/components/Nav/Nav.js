@@ -45,9 +45,9 @@ const Nav = (props) => {
 
   return (
     <nav className='bg-gradient-to-br from-betaMin to-betaMax dark:from-darkBetaMin dark:to-darkBetaMax'>
-      <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto px-2 md:px-6 lg:px-8'>
         <div className='relative flex items-center justify-between h-16'>
-          <div className='absolute inset-y-0 left-0 flex items-center sm:hidden'>
+          <div className='absolute inset-y-0 left-0 flex items-center md:hidden'>
             {/* // Mobile menu button */}
             <button
               onClick={() => {
@@ -94,7 +94,7 @@ const Nav = (props) => {
               )}
             </button>
           </div>
-          <div className='flex-1 flex items-center justify-center sm:items-stretch sm:justify-start'>
+          <div className='flex-1 flex items-center justify-center md:items-stretch md:justify-start'>
             <div className='flex-shrink-0 flex items-center'>
               <Link
                 to='/'
@@ -106,7 +106,7 @@ const Nav = (props) => {
                 <GiCutDiamond className='hidden lg:block h-8 w-auto text-alpha-pure dark:text-darkAlpha-major' />
               </Link>
             </div>
-            <div className='hidden sm:block sm:ml-6'>
+            <div className='hidden md:block md:ml-6'>
               <div className='flex space-x-4'>
                 <Link
                   to='/events'
@@ -142,7 +142,7 @@ const Nav = (props) => {
               </div>
             </div>
           </div>
-          <div className='absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0'>
+          <div className='absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0'>
             <ThemeToggle />
 
             {/* // Profile dropdown // */}
@@ -208,7 +208,7 @@ const Nav = (props) => {
       >
         {/* // Mobile menu, show/hide based on menu state. // */}
         {(ref) => (
-          <div className='sm:hidden' id='mobile-menu'>
+          <div className='md:hidden' id='mobile-menu'>
             <div className='px-2 pt-2 pb-3 space-y-1'>
               <Link
                 to='/events'
