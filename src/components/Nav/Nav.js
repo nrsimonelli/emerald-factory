@@ -43,6 +43,64 @@ const Nav = (props) => {
     }
   };
 
+  const profileOptions = () => {
+    if (props.user.user) {
+      return (
+        <div
+          className='origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-alpha-pure dark:bg-darkAlpha ring-1 ring-darkAlpha-pure ring-opacity-5 focus:outline-none'
+          role='menu'
+          aria-orientation='vertical'
+          aria-labelledby='user-menu'
+        >
+          <a
+            href='http://localhost:5000/api/auth/login'
+            className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
+            role='menuitem'
+          >
+            <div>
+              Log in with Discord <FiLogIn className='inline' />
+            </div>
+          </a>
+        </div>
+      );
+    } else {
+      return (
+        <div
+          className='origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-alpha-pure dark:bg-darkAlpha ring-1 ring-darkAlpha-pure ring-opacity-5 focus:outline-none'
+          role='menu'
+          aria-orientation='vertical'
+          aria-labelledby='user-menu'
+        >
+          <Link
+            to='/profile'
+            className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
+            role='menuitem'
+            onClick={() => {
+              closeIfOpen();
+            }}
+          >
+            Your Profile
+          </Link>
+          <a
+            href='#about'
+            className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
+            role='menuitem'
+          >
+            Settings
+          </a>
+
+          <a
+            href='http://localhost:5000/api/auth/login'
+            className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
+            role='menuitem'
+          >
+            Sign out
+          </a>
+        </div>
+      );
+    }
+  };
+
   return (
     <nav className='bg-gradient-to-br from-betaMin to-betaMax dark:from-darkBetaMin dark:to-darkBetaMax'>
       <div className='max-w-7xl mx-auto px-2 md:px-6 lg:px-8'>
@@ -162,35 +220,7 @@ const Nav = (props) => {
                 leaveFrom='opacity-100 scale-100'
                 leaveTo='opacity-0 scale-95'
               >
-                <div
-                  className='origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-alpha-pure dark:bg-darkAlpha ring-1 ring-darkAlpha-pure ring-opacity-5 focus:outline-none'
-                  role='menu'
-                  aria-orientation='vertical'
-                  aria-labelledby='user-menu'
-                >
-                  <a
-                    href='/'
-                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
-                    role='menuitem'
-                  >
-                    Your Profile
-                  </a>
-                  <a
-                    href='/'
-                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
-                    role='menuitem'
-                  >
-                    Settings
-                  </a>
-
-                  <a
-                    href='http://localhost:5000/api/auth/login'
-                    className='block px-4 py-2 text-sm text-darkAlpha-minor hover:bg-alpha-major dark:text-alpha-minor dark:hover:bg-darkAlpha-minor'
-                    role='menuitem'
-                  >
-                    Sign out
-                  </a>
-                </div>
+                {profileOptions}
               </Transition>
             </div>
           </div>

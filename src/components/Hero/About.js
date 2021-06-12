@@ -14,65 +14,69 @@ const About = () => {
         <div className='flex flex-wrap text-center justify-center'>
           <div className='w-full md:w-7/12 lg:w-6/12 px-4'>
             <h2
+              id='anchor'
               data-aos='zoom-out-right'
               className='text-4xl font-semibold dark:text-alpha-major text-darkAlpha-major'
             >
-              Build something
+              Join the Community
             </h2>
             <p className='text-lg leading-relaxed mt-4 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
-              Put the potentially record low maximum sea ice extent
-              tihs year down to low ice. According to the National
-              Oceanic and Atmospheric Administration, Ted, Scambos.
+              From first timers to seasoned veterans, all are welcome.
+              Sign up for one of our regularly scheduled Scythe events
+              today!
             </p>
           </div>
         </div>
         <div className='flex flex-wrap mt-12 justify-center'>
-          <div className='w-full md:w-7/12 lg:w-3/12 px-4 text-center'>
+          <div className='w-full lg:mt-0 lg:w-3/12 px-4 text-center'>
             <div
               data-aos='flip-left'
               data-aos-delay='400'
+              data-aos-anchor-placement='about'
               className='p-3 w-12 h-12 shadow-lg rounded-full bg-gradient-to-br from-betaMin-minor to-betaMax-minor dark:from-darkBetaMin-minor dark:to-darkBetaMax-minor inline-flex items-center justify-center'
             >
               <RiPlantFill className='h-8 w-auto text-alpha-pure dark:text-darkAlpha-pure' />
             </div>
-            <h6 className='text-xl mt-5 font-semibold dark:text-alpha-major text-darkAlpha-major'>
-              Learn & Grow
+            <h6 className='text-xl mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
+              Grow
             </h6>
-            <p className='mt-2 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
-              Deepen your understanding of the game by taking
-              advantage the community's rich knowledge base.
+            <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid md:block hidden'>
+              Deepen your understanding of the game alongside other
+              passionate players.
             </p>
           </div>
-          <div className='w-full md:w-7/12 lg:w-3/12 px-4 text-center'>
+          <div className='w-full mt-8 lg:mt-0 lg:w-3/12 px-4 text-center'>
             <div
               data-aos='flip-left'
               data-aos-delay='800'
+              data-aos-anchor-placement='about'
               className='p-3 w-12 h-12 shadow-lg rounded-full bg-gradient-to-br from-betaMin-minor to-betaMax-minor dark:from-darkBetaMin-minor dark:to-darkBetaMax-minor inline-flex items-center justify-center'
             >
               <IoTrophy className='h-8 w-auto text-alpha-pure dark:text-darkAlpha-pure' />
             </div>
-            <h5 className='text-xl mt-5 font-semibold dark:text-alpha-major text-darkAlpha-major'>
-              Test your skills
+            <h5 className='text-xl mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
+              Compete
             </h5>
-            <p className='mt-2 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
-              Challenge yourself against top players from around the
-              world, take your game to the next level.
+            <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid md:block hidden'>
+              Take your game to the next level against players from
+              around the world.
             </p>
           </div>
-          <div className='w-full md:w-7/12 lg:w-3/12 px-4 text-center'>
+          <div className='w-full mt-8 lg:mt-0 lg:w-3/12 px-4 text-center'>
             <div
               data-aos='flip-left'
               data-aos-delay='1200'
+              data-aos-anchor-placement='about'
               className='p-3 w-12 h-12 shadow-lg rounded-full bg-gradient-to-br from-betaMin-minor to-betaMax-minor dark:from-darkBetaMin-minor dark:to-darkBetaMax-minor inline-flex items-center justify-center'
             >
               <AiTwotoneHeart className='h-8 w-auto text-alpha-pure dark:text-darkAlpha-pure' />
             </div>
-            <h5 className='text-xl mt-5 font-semibold dark:text-alpha-major text-darkAlpha-major'>
+            <h5 className='text-xl mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
               Support
             </h5>
-            <p className='mt-2 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
-              Be a part of something new and exciting! Help lift up
-              those around you.
+            <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid md:block hidden'>
+              Help lift up those around you while enjoying the
+              wonderful game of Scythe.
             </p>
           </div>
         </div>
