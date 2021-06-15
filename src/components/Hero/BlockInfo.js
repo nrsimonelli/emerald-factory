@@ -2,7 +2,10 @@ import React from 'react';
 
 const BlockInfo = () => {
   return (
-    <div className='w-full min-h-screen bg-gradient-to-br from-betaMin-minor to-betaMax-minor dark:from-darkBetaMin dark:to-darkBetaMax'>
+    <div
+      id='block-info'
+      className='w-full min-h-screen bg-gradient-to-br from-betaMin-minor to-betaMax-minor dark:from-darkBetaMin dark:to-darkBetaMax'
+    >
       <svg
         id='visual'
         className='w-full'

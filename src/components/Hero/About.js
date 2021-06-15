@@ -12,7 +12,7 @@ const About = () => {
     >
       <div className='container mx-auto px-4 lg:pt-24 lg:pb-64'>
         <div className='flex flex-wrap text-center justify-center'>
-          <div className='w-full md:w-7/12 lg:w-6/12 px-4'>
+          <div className='w-full md:w-6/12 px-4'>
             <h2
               id='anchor'
               data-aos='zoom-out-right'
@@ -22,13 +22,12 @@ const About = () => {
             </h2>
             <p className='text-lg leading-relaxed mt-4 mb-4 text-darkAlpha-mid dark:text-alpha-mid'>
               From first timers to seasoned veterans, all are welcome.
-              Sign up for one of our regularly scheduled Scythe events
-              today!
+              Sign up for one of our Scythe events today!
             </p>
           </div>
         </div>
         <div className='flex flex-wrap mt-12 justify-center'>
-          <div className='w-full lg:mt-0 lg:w-3/12 px-4 text-center'>
+          <div className='w-full md:mt-0 md:w-3/12 px-4 text-center'>
             <div
               data-aos='flip-left'
               data-aos-delay='400'
@@ -40,12 +39,12 @@ const About = () => {
             <h6 className='text-xl mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
               Grow
             </h6>
-            <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid md:block hidden'>
+            <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid lg:block hidden'>
               Deepen your understanding of the game alongside other
               passionate players.
             </p>
           </div>
-          <div className='w-full mt-8 lg:mt-0 lg:w-3/12 px-4 text-center'>
+          <div className='w-full mt-8 md:mt-0 md:w-3/12 px-4 text-center'>
             <div
               data-aos='flip-left'
               data-aos-delay='800'
@@ -57,12 +56,12 @@ const About = () => {
             <h5 className='text-xl mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
               Compete
             </h5>
-            <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid md:block hidden'>
+            <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid lg:block hidden'>
               Take your game to the next level against players from
               around the world.
             </p>
           </div>
-          <div className='w-full mt-8 lg:mt-0 lg:w-3/12 px-4 text-center'>
+          <div className='w-full mt-8 md:mt-0 md:w-3/12 px-4 text-center'>
             <div
               data-aos='flip-left'
               data-aos-delay='1200'
@@ -74,7 +73,7 @@ const About = () => {
             <h5 className='text-xl mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
               Support
             </h5>
-            <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid md:block hidden'>
+            <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid lg:block hidden'>
               Help lift up those around you while enjoying the
               wonderful game of Scythe.
             </p>
