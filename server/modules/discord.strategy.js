@@ -58,6 +58,60 @@ passport.use(
                         guilds = $4
                         WHERE "discord_id" = $1;`;
 
+              const checkPlayerString = `SELECT * FROM player WHERE 
+                        user_id = $1;`;
+
+              const updatePlayerString = `UPDATE "player" SET
+                        username = $2,
+                        last_login = now(), 
+                        user_id = $1;`;
+
+              const newPlayerString = `INSERT INTO "player"
+                        (username, user_id)
+                        VALUES
+                        ($1, $2);`;
+
+              const checkPlayer = pool
+                .query(checkPlayerString, [user.discord_id])
+                .then((result) => {
+                  console.log('checkPlayer result', result);
+                  if (result !== undefined) {
+                    return true;
+                  } else {
+                    return false;
+                  }
+                })
+                .catch((err) => {
+                  console.log('checkPlayer error', err);
+                });
+
+              if (checkPlayer) {
+                pool
+                  .query(updatePlayerString, [
+                    user.discord_id,
+                    `${profile.username}#${profile.discriminator}`,
+                  ])
+                  .then((result) => {
+                    console.log('PLAYER UPDATED:', result);
+                  })
+                  .catch((err) => {
+                    console.log('PLAYER UPDATE ERROR:', err);
+                  });
+              }
+              if (!checkPlayer) {
+                pool
+                  .query(newPlayerString, [
+                    `${profile.username}#${profile.discriminator}`,
+                    profile.id,
+                  ])
+                  .then((result) => {
+                    console.log('NEW PLAYER ADDED:', result);
+                  })
+                  .catch((err) => {
+                    console.log('NEW PLAYER ERROR:', err);
+                  });
+              }
+
               pool
                 .query(updateUserString, [
                   user.discord_id,
