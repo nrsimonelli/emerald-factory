@@ -18,11 +18,6 @@ router.get('/', rejectUnauthenticated, (req, res) => {
   console.log('testing req.user', req.user);
 });
 
-router.get('/test', rejectUnauthenticated, (req, res) => {
-  res.sendStatus(200);
-  console.log('req.user:', req.user);
-});
-
 router.post('/logout', (req, res) => {
   req.logout();
   res.sendStatus(200);

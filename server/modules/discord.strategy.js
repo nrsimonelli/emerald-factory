@@ -4,11 +4,13 @@ const DiscordStrategy = require('passport-discord');
 const pool = require('../modules/pool');
 
 passport.serializeUser((user, done) => {
-  console.log('in passport serialize');
+  console.log('SERIALIZING USER');
+  console.log(user.discord_id);
   done(null, user.discord_id);
 });
 
 passport.deserializeUser((discord_id, done) => {
+  console.log('DESERIALIZING USER');
   pool
     .query(`SELECT * FROM "user" WHERE discord_id = $1`, [discord_id])
     .then((result) => {
@@ -38,35 +40,36 @@ passport.use(
       try {
         const { id, username, discriminator, avatar, guilds } =
           profile;
-        console.log(id, username, discriminator, avatar, guilds);
+
+        console.log('USE ID', profile.id);
 
         pool
-          .query('SELECT * FROM "user" WHERE discord_id = $1;', [id])
+          .query('SELECT * FROM "user" WHERE discord_id = $1;', [
+            profile.id,
+          ])
           .then((result) => {
             const user = result && result.rows && result.rows[0];
-            console.log('in .then, user:', user);
+            console.log('IN THEN PASSPORT.USE');
 
             if (user !== undefined) {
-              const updateUser = pool.query(
-                `UPDATE "user" SET
+              const updateUserString = `UPDATE "user" SET
                         discord_tag = $2,
                         avatar = $3,
                         guilds = $4
-                        WHERE "discord_id" = $1;`
-              );
+                        WHERE "discord_id" = $1;`;
 
               pool
-                .query(updateUser, [
+                .query(updateUserString, [
                   user.discord_id,
                   `${profile.username}#${profile.discriminator}`,
                   profile.avatar,
                   profile.guilds,
                 ])
                 .then((result) => {
-                  console.log('result', result);
+                  console.log('UPDATE OK');
                 })
                 .catch((err) => {
-                  console.log('err', err);
+                  console.log('UPDATE ERR', err);
                 });
 
               done(null, user);

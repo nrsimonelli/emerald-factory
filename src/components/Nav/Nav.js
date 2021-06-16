@@ -44,7 +44,7 @@ const Nav = (props) => {
   };
 
   const profileOptions = () => {
-    if (props.user.user) {
+    if (!props.user.user) {
       return (
         <div
           className='origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-alpha-pure dark:bg-darkAlpha ring-1 ring-darkAlpha-pure ring-opacity-5 focus:outline-none'
