@@ -1,14 +1,17 @@
 const passport = require('passport');
 const DiscordStrategy = require('passport-discord');
+const Player = require('../models/Player');
 
 const pool = require('../modules/pool');
 
+// Serialize User
 passport.serializeUser((user, done) => {
   console.log('SERIALIZING USER');
   console.log(user.discord_id);
   done(null, user.discord_id);
 });
 
+// Deserialize User
 passport.deserializeUser((discord_id, done) => {
   console.log('DESERIALIZING USER');
   pool
@@ -27,6 +30,7 @@ passport.deserializeUser((discord_id, done) => {
     });
 });
 
+// Discord Strategy Authentication
 passport.use(
   'discord',
   new DiscordStrategy(
@@ -41,12 +45,10 @@ passport.use(
         const { id, username, discriminator, avatar, guilds } =
           profile;
 
-        console.log('USE ID', profile.id);
+        console.log('USE ID', id);
 
         pool
-          .query('SELECT * FROM "user" WHERE discord_id = $1;', [
-            profile.id,
-          ])
+          .query('SELECT * FROM "user" WHERE discord_id = $1;', [id])
           .then((result) => {
             const user = result && result.rows && result.rows[0];
             console.log('IN THEN PASSPORT.USE');
@@ -89,7 +91,7 @@ passport.use(
                 pool
                   .query(updatePlayerString, [
                     user.discord_id,
-                    `${profile.username}#${profile.discriminator}`,
+                    `${username}#${discriminator}`,
                   ])
                   .then((result) => {
                     console.log('PLAYER UPDATED:', result);
@@ -101,8 +103,8 @@ passport.use(
               if (!checkPlayer) {
                 pool
                   .query(newPlayerString, [
-                    `${profile.username}#${profile.discriminator}`,
-                    profile.id,
+                    `${username}#${discriminator}`,
+                    id,
                   ])
                   .then((result) => {
                     console.log('NEW PLAYER ADDED:', result);
@@ -115,12 +117,12 @@ passport.use(
               pool
                 .query(updateUserString, [
                   user.discord_id,
-                  `${profile.username}#${profile.discriminator}`,
-                  profile.avatar,
-                  profile.guilds,
+                  `${username}#${discriminator}`,
+                  avatar,
+                  guilds,
                 ])
                 .then((result) => {
-                  console.log('UPDATE OK');
+                  console.log('UPDATE OK:', result);
                 })
                 .catch((err) => {
                   console.log('UPDATE ERR', err);
@@ -131,12 +133,7 @@ passport.use(
               const newUser = pool.query(
                 `INSERT INTO "user" ("discord_id", "discord_tag", "avatar", "guilds") 
                         VALUES ($1, $2, $3, $4);`,
-                [
-                  profile.id,
-                  `${profile.username}#${profile.discriminator}`,
-                  profile.avatar,
-                  profile.guilds,
-                ]
+                [id, `${username}#${discriminator}`, avatar, guilds]
               );
 
               done(null, newUser);
