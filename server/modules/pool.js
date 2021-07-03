@@ -21,7 +21,7 @@ if (process.env.DATABASE_URL) {
   config = {
     host: 'localhost',
     port: 5432, // env var: PGPORT
-    database: 'scythe_league', // local DB name
+    database: 'mydb_test', // local DB name
     max: 10,
     idleTimeoutMillis: 30000,
   };
