@@ -27,7 +27,7 @@ const About = () => {
           </div>
         </div>
         <div className='flex flex-wrap mt-12 justify-center'>
-          <div className='w-full md:mt-0 md:w-3/12 px-4 text-center'>
+          <div className='md:mt-0 w-4/12 md:w-3/12 px-4 mt-8 text-center'>
             <div
               data-aos='flip-left'
               data-aos-delay='400'
@@ -36,7 +36,7 @@ const About = () => {
             >
               <RiPlantFill className='h-8 w-auto text-alpha-pure dark:text-darkAlpha-pure' />
             </div>
-            <h6 className='text-xl mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
+            <h6 className='text-xl text-center w-full mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
               Grow
             </h6>
             <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid lg:block hidden'>
@@ -44,7 +44,7 @@ const About = () => {
               passionate players.
             </p>
           </div>
-          <div className='w-full mt-8 md:mt-0 md:w-3/12 px-4 text-center'>
+          <div className='mt-8 md:mt-0 w-4/12 md:w-3/12 px-4 text-center'>
             <div
               data-aos='flip-left'
               data-aos-delay='800'
@@ -53,7 +53,7 @@ const About = () => {
             >
               <IoTrophy className='h-8 w-auto text-alpha-pure dark:text-darkAlpha-pure' />
             </div>
-            <h5 className='text-xl mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
+            <h5 className='text-xl text-center w-full mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
               Compete
             </h5>
             <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid lg:block hidden'>
@@ -61,7 +61,7 @@ const About = () => {
               around the world.
             </p>
           </div>
-          <div className='w-full mt-8 md:mt-0 md:w-3/12 px-4 text-center'>
+          <div className='mt-8 md:mt-0 w-4/12 md:w-3/12 px-4 text-center'>
             <div
               data-aos='flip-left'
               data-aos-delay='1200'
@@ -70,7 +70,7 @@ const About = () => {
             >
               <AiTwotoneHeart className='h-8 w-auto text-alpha-pure dark:text-darkAlpha-pure' />
             </div>
-            <h5 className='text-xl mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
+            <h5 className='text-xl text-center w-full mt-4 font-semibold dark:text-alpha-major text-darkAlpha-major'>
               Support
             </h5>
             <p className='mt-2 text-darkAlpha-mid dark:text-alpha-mid lg:block hidden'>

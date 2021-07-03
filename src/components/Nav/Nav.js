@@ -172,7 +172,7 @@ const Nav = (props) => {
                     closeIfOpen();
                   }}
                 >
-                  <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
+                  <div className='text-alpha-pure hover:text-alpha px-3 py-2 rounded-md text-sm font-medium'>
                     Tournaments
                   </div>
                 </Link>
@@ -182,7 +182,7 @@ const Nav = (props) => {
                     closeIfOpen();
                   }}
                 >
-                  <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
+                  <div className='text-alpha-pure hover:text-alpha px-3 py-2 rounded-md text-sm font-medium'>
                     Leaderboard
                   </div>
                 </Link>
@@ -193,7 +193,7 @@ const Nav = (props) => {
                     closeIfOpen();
                   }}
                 >
-                  <div className='text-alpha hover:text-alpha-pure px-3 py-2 rounded-md text-sm font-medium'>
+                  <div className='text-alpha-pure hover:text-alpha px-3 py-2 rounded-md text-sm font-medium'>
                     Support
                   </div>
                 </Link>
@@ -246,7 +246,7 @@ const Nav = (props) => {
                   closeIfOpen();
                 }}
               >
-                <div className='text-alpha hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
+                <div className='text-alpha-pure hover:text-alpha block px-3 py-2 rounded-md text-base font-medium'>
                   Tournaments
                 </div>
               </Link>
@@ -257,7 +257,7 @@ const Nav = (props) => {
                   closeIfOpen();
                 }}
               >
-                <div className='text-alpha hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
+                <div className='text-alpha-pure hover:text-alpha block px-3 py-2 rounded-md text-base font-medium'>
                   Leaderboard
                 </div>
               </Link>
@@ -268,7 +268,7 @@ const Nav = (props) => {
                   closeIfOpen();
                 }}
               >
-                <div className='text-alpha hover:text-alpha-pure block px-3 py-2 rounded-md text-base font-medium'>
+                <div className='text-alpha-pure hover:text-alpha block px-3 py-2 rounded-md text-base font-medium'>
                   Support
                 </div>
               </Link>
